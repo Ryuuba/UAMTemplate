@@ -88,17 +88,23 @@
   }%
   {\end{columns}}%
 
-\title{\includegraphics[height = 0.2\textwidth]{UAM-A}\\
-       \vspace{0.75em}
-       \textcolor{white}{Tema 1:}\\
+\newenvironment{singledef}[1]%
+  {\begin{minipage}{0.5\textwidth} \begin{Block}{#1}}
+  {\end{Block} \end{minipage}}
+
+\title{{\LARGE Universidad Autónoma Metropolitana}\\
+       \noindent\textcolor{Xoc}{\rule{0.9\textwidth}{1mm}}\\
+       {\large UEA}\\
+       \textcolor{white}{Tema:}\\
       }
    \author[Adán G. Medrano-Chávez]{
          {\small Profesor:
-         {\bf \\Dr. Adán G. Medrano Chávez}
-         {\texttt \\adme@xanum.uam.mx}
+         {\bf \\Adán G. Medrano Chávez}
+         {\texttt \\agmc@azc.uam.mx}
          }
     }
-    
+%\institute{\includegraphics[height=0.25\textheight]{uampro}}
+  
 \date{}
 
 \AtBeginSection[1]
@@ -130,7 +136,7 @@
 
 \addtobeamertemplate{frametitle}{}{%
 \begin{textblock*}{0.1\textheight}(0.875\textwidth, -0.105\textheight)
-\includegraphics[height=0.09\textheight]{uam_main}
+\includegraphics[height=0.09\textheight]{uampro}
 \end{textblock*}}
 
 \begin{frame}[t,plain]
