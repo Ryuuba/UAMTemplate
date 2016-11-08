@@ -80,6 +80,14 @@
 \renewcommand{\lstlistingname}{Código} % Listing -> Code
 \renewcommand{\ALG@name}{Algoritmo}
 
+\newenvironment{twocols}%
+  {
+    \newcommand{\colx}[1]{\begin{column}{0.4\textwidth} ##1 \end{column} \hfill}
+    \newcommand{\coly}[1]{\begin{column}{0.4\textwidth} ##1 \end{column}}
+    \begin{columns}
+  }%
+  {\end{columns}}%
+
 \title{\includegraphics[height = 0.2\textwidth]{UAM-A}\\
        \vspace{0.75em}
        \textcolor{white}{Tema 1: Redes de computadoras y la Internet}\\
@@ -95,21 +103,24 @@
 
 \AtBeginSection[1]
 {
-    \begin{frame}
-        \frametitle{Contenido}
-        \tableofcontents[currentsection,hideallsubsections, sectionstyle=show/shaded, subsectionstyle=hide]
-    \end{frame}
+  \begin{frame}
+    \frametitle{Contenido}
+    \tableofcontents[currentsection,
+                     hideallsubsections,
+                     sectionstyle=show/shaded,
+                     subsectionstyle=hide]
+  \end{frame}
 }
 
 \AtBeginSubsection[1]
 {
-    \begin{frame}
-        \frametitle{Contenido}
-        \tableofcontents[currentsubsection, 
-                         hideothersubsections,
-                         sectionstyle=show/shaded,
-                         subsectionstyle=show/hide]
-    \end{frame}
+  \begin{frame}
+    \frametitle{Contenido}
+    \tableofcontents[currentsubsection, 
+                     hideothersubsections,
+                     sectionstyle=show/shaded,
+                     subsectionstyle=show/hide]
+  \end{frame}
 }
 
 \graphicspath{{Figures/}{Logo/}}
@@ -123,7 +134,7 @@
 \end{textblock*}}
 
 \begin{frame}[t,plain]
-    \titlepage
+  \titlepage
 \end{frame}
 
 \input{Introduction}
