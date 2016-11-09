@@ -88,9 +88,15 @@
   }%
   {\end{columns}}%
 
-\newenvironment{singledef}[1]%
-  {\begin{minipage}{0.5\textwidth} \begin{Block}{#1}}
+\newenvironment{singledef}[2][0.5]%
+  {\begin{minipage}{#1\textwidth} \begin{Block}{#2}}
   {\end{Block} \end{minipage}}
+  
+ \newcommand{\insertimg}[2][]%
+  {\centering%
+   \includegraphics[width = \textwidth]{#2}\\%
+   {\scriptsize{#1}}%
+  }
 
 \title{{\LARGE Universidad Autónoma Metropolitana}\\
        \noindent\textcolor{Xoc}{\rule{0.9\textwidth}{1mm}}\\
