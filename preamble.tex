@@ -1,0 +1,136 @@
+\usepackage[spanish,mexico]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textpos}
+\usepackage{booktabs}
+\usepackage{listingsutf8} % Embebbed formatted code to the file
+\usepackage{algorithm} %required to write pseudocode
+\usepackage{algpseudocode}
+\lstset{basicstyle=\scriptsize\ttfamily,language=C++,keywordstyle=\color{Xoc},stringstyle=\color{Izt},}
+\uselanguage{spanish}
+\languagepath{spanish}
+\deftranslation[to=spanish]{Example}{Ejemplo}
+\deftranslation[to=spanish]{example}{ejemplo}
+\deftranslation[to=spanish]{Examples}{Ejemplos}
+\deftranslation[to=spanish]{examples}{ejemplos}
+\mode<presentation>
+{
+  \definecolor{Azc}{RGB}{205,3,46}
+  \definecolor{Izt}{RGB}{87,165,25}
+  \definecolor{Xoc}{RGB}{0,114,206}
+  \definecolor{Cua}{RGB}{240,130,0}
+  \definecolor{Ler}{RGB}{173,37,168}
+  \definecolor{Wolf}{RGB}{64,64,64}
+  \usetheme{Antibes}
+  \usecolortheme[named=black]{structure}
+  %\useoutertheme[subsection=false]{miniframes}
+  \useoutertheme{infolines}
+  \usefonttheme{structurebold}
+  \setbeamercolor*{palette primary}{fg=white,bg=Wolf}
+  \setbeamercolor*{palette tertiary}{fg=white,bg=Xoc}
+  \setbeamercolor{frametitle}{fg=Wolf,bg=white}
+  \setbeamercolor{footlinecolor}{bg=white,fg=gray}   
+  \beamertemplatenavigationsymbolsempty
+  \newcommand\mytext{Universidad Autónoma Metropolitana}
+  \newcommand*\Bitem{%
+  \item[\color{Xoc}{\textbullet}]}
+  \makeatother
+  \setbeamertemplate{footline}
+  {%
+    \leavevmode%
+    \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,
+                                 ht=2.5ex,
+                                 dp=1.125ex,
+                                 leftskip=.3cm,
+                                 rightskip=.3cm]{footlinecolor}%
+    \mytext
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,
+                           ht=2.5ex,
+                           dp=1.125ex,
+                           leftskip=.3cm,
+                           rightskip=.3cm plus1fil]{footlinecolor}%
+    \usebeamerfont{author in head/foot}\insertshortauthor\hfill\insertpagenumber
+    \end{beamercolorbox}}%
+    \vskip0pt%
+  }
+\makeatletter
+   \let\oldfootnotesize\footnotesize
+   \renewcommand*{\footnotesize}{\oldfootnotesize\tiny}
+   %\renewcommand\mathfamilydefault{\rmdefault}
+   \setbeamercovered{transparent}
+   \setbeamertemplate{itemize item}{\color{Izt}$\blacksquare$}
+   \setbeamertemplate{enumerate items}[square]
+   \setbeamercolor{item projected}{bg=Xoc,fg=white}
+   \setbeamertemplate{itemize subitem}{\color{Izt}$\blacktriangleright$}
+   \setbeamertemplate{blocks}[rounded]
+   \newenvironment<>{Block}[1]{%
+      \setbeamercolor{block title}{fg=white,bg=Izt}%
+      \begin{block}#2{#1}}{\end{block}}
+   \newenvironment<>{AlertBlock}[1]{%
+      \setbeamercolor{block title}{fg=white,bg=Cua}%
+      \begin{block}#2{#1}}{\end{block}}
+   \newenvironment<>{BlueBlock}[1]{%
+      \setbeamercolor{block title}{fg=white,bg=Xoc}%
+      \begin{block}#2{#1}}{\end{block}}
+}
+
+\renewcommand{\lstlistingname}{Código} % Listing -> Code
+\renewcommand{\ALG@name}{Algoritmo}
+
+\newenvironment{twocols}%
+  {
+    \newcommand{\colx}[1]{\begin{column}{0.4\textwidth} ##1 \end{column} \hfill}
+    \newcommand{\coly}[1]{\begin{column}{0.4\textwidth} ##1 \end{column}}
+    \begin{columns}
+  }%
+  {\end{columns}}%
+
+\newenvironment{singledef}[2][0.5]%
+  {\begin{minipage}{#1\textwidth} \begin{Block}{#2}}
+  {\end{Block} \end{minipage}}
+  
+ \newcommand{\insertimg}[2][]%
+  {\centering%
+   \includegraphics[width = \textwidth]{#2}\\%
+   {\scriptsize{#1}}%
+  }
+
+\title{{\LARGE Universidad Autónoma Metropolitana}\\
+       \noindent\textcolor{Xoc}{\rule{0.9\textwidth}{1mm}}\\
+       {\large UEA}\\
+       \textcolor{white}{Tema:}\\
+      }
+   \author[Adán G. Medrano-Chávez]{
+         {\small Profesor:
+         {\bf \\Adán G. Medrano Chávez}
+         {\texttt \\agmc@azc.uam.mx}
+         }
+    }
+%\institute{\includegraphics[height=0.25\textheight]{uampro}}
+  
+\date{}
+
+\AtBeginSection[1]
+{
+  \begin{frame}
+    \frametitle{Contenido}
+    \tableofcontents[currentsection,
+                     hideallsubsections,
+                     sectionstyle=show/shaded,
+                     subsectionstyle=hide]
+  \end{frame}
+}
+
+\AtBeginSubsection[1]
+{
+  \begin{frame}
+    \frametitle{Contenido}
+    \tableofcontents[currentsubsection, 
+                     hideothersubsections,
+                     sectionstyle=show/shaded,
+                     subsectionstyle=show/hide]
+  \end{frame}
+}
+
+\graphicspath{{Figures/}{Logo/}}
