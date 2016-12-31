@@ -84,7 +84,18 @@
     \newcommand{\coly}[1]{\begin{column}{0.4\textwidth} ##1 \end{column}}
     \begin{columns}
   }%
-  {\end{columns}}%
+  {\end{columns}%
+}%
+
+\newenvironment{threecols}%
+  {
+    \newcommand{\colx}[1]{\begin{column}{0.31\textwidth} ##1 \end{column} \hfill}
+    \newcommand{\coly}[1]{\begin{column}{0.31\textwidth} ##1 \end{column} \hfill}
+    \newcommand{\colz}[1]{\begin{column}{0.31\textwidth} ##1 \end{column} }
+    \begin{columns}
+  }%
+  {\end{columns}%
+}%
 
 \newenvironment{singledef}[2][0.5]%
   {\begin{minipage}{#1\textwidth} \begin{Block}{#2}}
