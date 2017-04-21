@@ -98,14 +98,13 @@
 }%
 
 \newenvironment{singledef}[2][0.5]%
-  {\begin{minipage}{#1\textwidth} \begin{Block}{#2}}
-  {\end{Block} \end{minipage}}
+  {\begin{center}\begin{minipage}{#1\textwidth} \begin{Block}{#2}}
+  {\end{Block} \end{minipage}\end{center}}
   
- \newcommand{\insertimg}[2][]%
-  {\centering%
-   \includegraphics[width = \textwidth]{#2}\\%
-   {\scriptsize{#1}}%
-  }
+\newcommand{\insertimg}[2][]{\centering%
+  \includegraphics[width = \textwidth]{#2}\\%
+  \scriptsize#1%
+}
 
 \title{{\LARGE Universidad Autónoma Metropolitana}\\
        \noindent\textcolor{Xoc}{\rule{0.9\textwidth}{1mm}}\\
@@ -156,5 +155,5 @@
 \newcommand{\orange}[1]{\textcolor{Cua}{#1}}
 \newcommand{\grape}[1]{\textcolor{Ler}{#1}}
 \newcommand{\green}[1]{\textcolor{Izt}{#1}}
-\newcommand{\eg}{\textit{e.g.}}
-\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\eg}{\textit{e.g. }}
+\newcommand{\ie}{\textit{i.e. }}
