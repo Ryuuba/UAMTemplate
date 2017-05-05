@@ -1,7 +1,7 @@
-$pdflatex = 'pdflatex --shell-escape %O %S';
-$out_dir = "temp";
+$filename = 'main';
+$pdflatex = 'pdflatex -interaction=nonstopmode -halt-on-error --shell-escape %O %S';
+$out_dir = "Auxiliary";
 $pdf_mode = 1;
-@default_filesq = ('main.tex');
+@default_files = ($filename . '.tex');
 $pdf_update_method = 0;
-$clean_ext = "bbl nav out snm fls fdb_latexmk toc";
-
+$out_file = $out_dir . '/' . $filename . '.pdf';

@@ -2,4 +2,6 @@
 {
     // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
     "editor.tabSize": 2,
+  // Dictionary language. Currently supported: 'en_US', 'en_GB-ise', or 'es_ANY'.
+  "spellchecker.language": "es_ANY"
 }

@@ -34,6 +34,8 @@
   \newcommand\mytext{Universidad Autónoma Metropolitana}
   \newcommand*\Bitem{%
   \item[\color{Xoc}{\textbullet}]}
+  \newcommand*\Aitem{%
+  \item[\color{Cua}{\textbullet}]}
   \makeatother
   \setbeamertemplate{footline}
   {%
@@ -69,9 +71,11 @@
       \begin{block}#2{#1}}{\end{block}}
    \newenvironment<>{AlertBlock}[1]{%
       \setbeamercolor{block title}{fg=white,bg=Cua}%
+      %\setbeamertemplate{itemize/enumerate item}{\color{Cua}$\blacksquare$}
       \begin{block}#2{#1}}{\end{block}}
    \newenvironment<>{BlueBlock}[1]{%
       \setbeamercolor{block title}{fg=white,bg=Xoc}%
+      %\setbeamertemplate{itemize/enumerate item}{\color{Xoc}$\blacksquare$}
       \begin{block}#2{#1}}{\end{block}}
 }
 
@@ -105,20 +109,6 @@
   \includegraphics[width = \textwidth]{#2}\\%
   \scriptsize#1%
 }
-
-\title{{\LARGE Universidad Autónoma Metropolitana}\\
-       \noindent\textcolor{Xoc}{\rule{0.9\textwidth}{1mm}}\\
-       {\large UEA}\\
-       \textcolor{white}{Tema:}\\
-      }
-   \author[Adán G. Medrano-Chávez]{
-         {\small Profesor:
-         {\bf \\Adán G. Medrano Chávez}
-         {\texttt \\agmc@azc.uam.mx}
-         }
-    }
-  
-\date{}
 
 \AtBeginSection[1]
 {
