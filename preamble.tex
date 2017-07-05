@@ -6,7 +6,17 @@
 \usepackage{listingsutf8} % Embebbed formatted code to the file
 \usepackage{algorithm} %required to write pseudocode
 \usepackage{algpseudocode}
-\lstset{basicstyle=\scriptsize\ttfamily,language=C++,keywordstyle=\color{Xoc},stringstyle=\color{Izt},}
+\lstset{
+  language={Verilog}, 
+  numbers=left, 
+  numberstyle=\tiny\color{Wolf}, 
+  literate={`}{{\`{}}}1,
+  basicstyle=\scriptsize\ttfamily,
+  keywordstyle=\color{Xoc},
+  stringstyle=\color{Cua},
+  commentstyle=\color{Izt}
+}
+%\lstset{basicstyle=\scriptsize\ttfamily,language=C++,keywordstyle=\color{Xoc},stringstyle=\color{Izt},}
 \uselanguage{spanish}
 \languagepath{spanish}
 \deftranslation[to=spanish]{Example}{Ejemplo}
